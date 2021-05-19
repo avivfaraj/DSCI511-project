@@ -2,7 +2,7 @@
 
 by Aviv Farag, Jeff Braga, Gloria Sheppard
 
-This project synthesizes presents a dataset synthesizing Tech CEO's social media posts with their company's short term stock price data.
+This project presents a dataset synthesizing Tech CEO's social media posts with their company's short term stock price data.
 
 
 
