@@ -8,6 +8,8 @@ This project synthesizes presents a dataset synthesizing Tech CEO's social media
 
 ## Instructions
 
+To run the code, first open up the tc_tweets.ipynb.
+
 ## Notes, Limitations and Problems Encountered
 Initially, we had intended to gather posts from both Facebook and Twitter, but after experimenting with the API's for both platforms and at the advice of the professor we are focusing on just Twitter as a platform. Facebook's API was not as user friendly for this purpose, and also nowhere near as straightforward to gather the sort of data we wished to collect for this project.
 
