@@ -10,7 +10,7 @@ This project presents a dataset synthesizing Tech CEO's social media posts with 
 
 To run the code, first open up the tc_tweets.ipynb.
 
-## Notes, Limitations and Problems Encountered
+## Notes, Limitations, and Problems Encountered
 Initially, we had intended to gather posts from both Facebook and Twitter, but after experimenting with the API's for both platforms and at the advice of the professor we are focusing on just Twitter as a platform. Facebook's API was not as user friendly for this purpose, and also nowhere near as straightforward to gather the sort of data we wished to collect for this project.
 
 One problem that arose in the project design is the timezone differences. The New York Stock Exchange is run on Eastern Time, and it appeared that this was indeed the timezone given to us in the data returned from the IEX API. However, the Twitter API requests we make through the python wrapper Twython, return a timezone of GMT in their data. To make this even more confusing, if one is looking at the Twitter website itself, you will likely see a post in your own timezone, not GMT.
