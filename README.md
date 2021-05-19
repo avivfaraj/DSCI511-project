@@ -2,7 +2,7 @@
 
 by Aviv Farag, Jeff Braga, Gloria Sheppard
 
-This project presents a dataset synthesizing Tech CEO's social media posts with their company's short term stock price data. We hope this dataset can fuel further analysis and discussion of social media posting as intentional market strategy and the ability to quantify such actions.
+This project presents a dataset synthesizing Tech CEO's social media posts with their company's short term stock price data. We hope this dataset can fuel further discussion of social media posting as intentional market strategy and the ability to analyze such actions.
 
 
 
