@@ -12,9 +12,9 @@ To run the code, first open up the `tc_tweets.ipynb`. You will need authenticati
 
 1. Run code for importing packages
 2. Run Functions # 1 - 10
-3. Invoke add_old_tweets and add_new_tweets to fetch tweets for a specific CEO.
-4. Invoke sub_dataset function in order to modify tweet's dictionary and to download the required stock files from API. 
-5. Invoke add_to_dataset function in order to create a dataset out of the tweet's dictionary and stock files and append it to dataset file.
+3. Invoke `add_old_tweets` and `add_new_tweets` to fetch tweets for a specific CEO.
+4. Invoke `sub_dataset` function in order to modify tweet's dictionary and to download the required stock files from API. 
+5. Invoke `add_to_dataset` function in order to create a dataset out of the tweet's dictionary and stock files and append it to dataset file.
 
 ## Notes, Limitations, and Problems Encountered
 Initially, we had intended to gather posts from both Facebook and Twitter, but after experimenting with the API's for both platforms and at the advice of the professor we are focusing on just Twitter as a platform. Facebook's API was not as user friendly for this purpose, and also nowhere near as straightforward to gather the sort of data we wished to collect for this project.
