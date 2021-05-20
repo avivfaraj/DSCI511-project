@@ -8,7 +8,7 @@ This project presents a dataset synthesizing Tech CEO's social media posts with 
 
 ## Instructions
 
-To run the code, first open up the tc_tweets.ipynb.
+To run the code, first open up the tc_tweets.ipynb. You will need authentication tokens for both Twython and IEX cloud for the initialize portion of the jupyter notebook.
 
 1. Run code for importing packages
 2. Run Functions # 1 - 10
