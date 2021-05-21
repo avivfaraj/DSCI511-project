@@ -6,7 +6,7 @@ This project presents a dataset synthesizing Tech CEO's social media posts with 
 
 ## Dataset
 
-`data.json` is the final dataset created by the code. Each other json file is specific to a specific CEO, and represents one piece of the final dataset. 
+`data.json` is the final dataset created by the code. Each other json file is specific to a particular CEO, and represents one piece of the final dataset. 
 
 ## Instructions
 
