@@ -17,6 +17,85 @@ To run the code, first open up the `tc_tweets.ipynb`. You will need authenticati
 3. Invoke `add_old_tweets` and `add_new_tweets` to fetch tweets for a specific CEO.
 4. Invoke `sub_dataset` function in order to modify the tweet's dictionary and to download the required stock files from the IEX API. 
 5. Invoke `add_to_dataset` function in order to create a dataset out of the tweet's dictionary and stock files and append it to the dataset file.
+6. Read `data.json` file in order to see changes.
+
+### Examples:
+In this examples I will create a dataset for Microsoft.
+1. Add a new company: 
+    ```Python
+    # Company details
+    company_name = "Microsoft"
+    symbol = "MSFT"
+    ceo = "Satya Nadella"
+    file = "sn_tweets.json"
+    screen_name = "satyanadella"
+    
+    # Get most recent tweets
+    # This function will also create a new file sn_tweets.json
+    new = add_new_tweets(screen_name, file)
+
+    #  Modify tweets and donwload stock files for May 2021.
+    data_to_add = sub_dataset(company_name, symbol, file, "2021", "05")
+
+    # Update dataset with the new data
+    add_to_dataset(company_name, symbol, ceo, data_to_add)
+
+    # Read data from file
+    dataset = json.loads(open("DSCI511-project/data.json",'r').read())
+    ```
+1. Get older tweets (Microsoft): 
+    ```Python
+    # Ensure file exist
+    try:
+        sn_dict = json.loads(open("DSCI511-project/"+file,'r').read())
+        
+    except FileNotFoundError:
+        sn_dict = None
+    
+    # Ensure dictionary exists
+    if sn_dict:
+    
+        # Get older tweets
+        # The new tweets will be saved in the sn_tweets.json file
+        older = add_old_tweets(screen_name, file, sn_dict)
+    ```
+1. Update dataset:
+    ```Python
+    year = "2020"
+    month = "04"
+    # Company details were written in example number #1
+    # Modify tweets and donwload stock files for April 2020
+    data_to_add = sub_dataset(company_name, symbol, file, year, month)
+    
+    # Ensure there is new data to be added.
+    if data_to_add:
+    
+        # Update dataset with the new data
+        add_to_dataset(company_name, symbol, ceo, data_to_add)
+    
+    # Read data from file
+    dataset = json.loads(open("DSCI511-project/data.json",'r').read())
+    ```
+    
+1. Read dataset:
+    ```Python
+    try:
+        # Read data from file
+        dataset = json.loads(open("DSCI511-project/data.json",'r').read())
+    except FileNotFoundError:
+        dataset = None
+    
+    # Ensure not empty
+    if dataset:
+        
+        # Print keys which are the companies currently in dataset
+        print("Keys: "+ dataset.keys())
+        
+        # Choose one key. For example, Microsoft:
+        print(dataset["Microsoft"])
+    ```
+    ### Requirements
+    Modules required: json, os, calendar, requests, datetime.datetime, datetime.timedelta, collections.defaultdict
 
 ## Notes, Limitations, and Problems Encountered
 Initially, we had intended to gather posts from both Facebook and Twitter, but after experimenting with the API's for both platforms and at the advice of the professor we are focusing on just Twitter as a platform. Facebook's API was not as user friendly for this purpose, and also nowhere near as straightforward to gather the sort of data we wished to collect for this project.
@@ -30,4 +109,6 @@ Another unexpected result comes from the Twython request options. If one specifi
 We also note that it is important to use the extended mode for the Twitter API request so as not to get a truncated tweet. Not seeing the full text could affect the accuracy in our "Does Post Mention Company Name" field.
 
 Finally, one last limitation is the hours of the stock market. If someone posts after the market is closed, or not during market hours, we were initially unsure how to report this data. In fact, some of the "1 Day Later", "2 Days Later" and "7 Days Later" fields may fall on a weekend or day the market was closed. We report such data with "-".
+
+
 
