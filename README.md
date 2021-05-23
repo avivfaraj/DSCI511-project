@@ -95,7 +95,7 @@ In this examples I will create a dataset for Microsoft.
         print(dataset["Microsoft"])
     ```
     ### Requirements
-    Modules required: json, os, calendar, requests, datetime.datetime, datetime.timedelta, collections.defaultdict
+    Modules required: json, os, calendar, requests, datetime.datetime, datetime.timedelta, collections.defaultdict, Twython
 
 ## Notes, Limitations, and Problems Encountered
 Initially, we had intended to gather posts from both Facebook and Twitter, but after experimenting with the API's for both platforms and at the advice of the professor we are focusing on just Twitter as a platform. Facebook's API was not as user friendly for this purpose, and also nowhere near as straightforward to gather the sort of data we wished to collect for this project.
