@@ -10,7 +10,7 @@ This project presents a dataset synthesizing Tech CEO's social media posts with 
 
 ## Instructions
 
-To run the code, first open up the `tc_tweets.ipynb`. You will need authentication tokens for both Twython and IEX cloud for the initialize portion of the jupyter notebook.
+To run the code, first open up the `tc_tweets.ipynb`. You will need authentication tokens for both Twython and IEX cloud for the initialize portion of the jupyter notebook. You will also need git installed and a github account to clone our repository for the initialization portion of the jupyter notebook.
 
 1. Run code for importing packages
 2. Run Functions # 1 - 10
@@ -95,7 +95,7 @@ In this examples I will create a dataset for Microsoft.
         print(dataset["Microsoft"])
     ```
     ### Requirements
-    Modules required: json, os, calendar, requests, datetime.datetime, datetime.timedelta, collections.defaultdict, Twython
+    Modules required: json, os, calendar, requests, datetime.datetime, datetime.timedelta, collections.defaultdict, Twython, git
 
 ## Notes, Limitations, and Problems Encountered
 Initially, we had intended to gather posts from both Facebook and Twitter, but after experimenting with the API's for both platforms and at the advice of the professor we are focusing on just Twitter as a platform. Facebook's API was not as user friendly for this purpose, and also nowhere near as straightforward to gather the sort of data we wished to collect for this project.
